@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/grocery")
-
 public class GroceryController {
     @Autowired
     GroceryService groceryService;
@@ -26,8 +25,8 @@ public class GroceryController {
         return new ResponseEntity<>(groceryService.getGroceryItemByName(name), HttpStatus.OK);
     }
 
-    @PostMapping
-    public ResponseEntity<GroceryItem> saveGrocery(@RequestBody GroceryItem groceryItem) {
-        return new ResponseEntity<>(groceryService.save(groceryItem), HttpStatus.CREATED);
-    }
+//    @PostMapping
+//    public ResponseEntity<GroceryItem> saveGrocery(@RequestBody GroceryItem groceryItem) {
+//        return new ResponseEntity<>(groceryService.save(groceryItem), HttpStatus.CREATED);
+//    }
 }
